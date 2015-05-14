@@ -1,6 +1,8 @@
 Router.route('/', function () {
   var isLoggedIn = Session.get('isLoggedIn');
 
+  this.layout('AppLayout');
+
   if (isLoggedIn)
     this.render('Home');
   else
